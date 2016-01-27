@@ -1,0 +1,64 @@
+{
+  "name": "rethinkdb-change-stream",
+  "version": "1.0.0",
+  "description": "Transform rethinkdb change feeds into node streams",
+  "main": "dist/index.js",
+  "keywords": [
+    "rethinkdb",
+    "change",
+    "feed",
+    "stream",
+    "changefeed",
+    "realtime",
+    "socket",
+    "http",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contra/rethinkdb-change-stream.git"
+  },
+  "author": "Contra <yo@contra.io> (http://contra.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/contra/rethinkdb-change-stream/issues"
+  },
+  "homepage": "https://github.com/contra/rethinkdb-change-stream#readme",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "preversion": "npm run build",
+    "build": "babel src --out-dir dist",
+    "clean": "rimraf dist",
+    "test": "eslint src"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015-loose": "^7.0.0",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "babelify": "^7.2.0",
+    "eslint": "^1.10.3",
+    "mocha": "^2.3.4",
+    "rimraf": "^2.5.0",
+    "should": "^8.0.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "ecmaFeatures": {
+      "modules": true
+    }
+  }
+}
