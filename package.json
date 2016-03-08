@@ -1,6 +1,6 @@
 {
   "name": "rethinkdb-change-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transform rethinkdb change feeds into node streams",
   "main": "dist/index.js",
   "keywords": [
@@ -60,5 +60,8 @@
     "ecmaFeatures": {
       "modules": true
     }
+  },
+  "dependencies": {
+    "through2": "^2.0.1"
   }
 }
