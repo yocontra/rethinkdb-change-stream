@@ -1,7 +1,7 @@
 import through from 'through2'
 
 export default (q) => {
-  var stream = through.obj()
+  const stream = through.obj()
 
   q.then(feed => {
     if (!feed.each) {
@@ -12,7 +12,7 @@ export default (q) => {
     feed.each((err, doc) => {
       if (err) return stream.emit('error', err)
 
-      var old = doc.getOldValue()
+      const old = doc.getOldValue()
       if (doc.isSaved() === false) {
         return stream.write({
           type: 'delete',
